@@ -30,6 +30,7 @@ pip install -r requirements.txt
 | BASE_URL | Основной URL адрес               | http://qa.digift.ru |
 | USERNAME | Имя пользователя для авторизации | -                   |
 | PASSWORD | Пароль пользователя              | -                   |
+
 Параметры могут быть заданы как в переменных окружения, так и в строке запуска тестов:
 ```commandline
 python -m pytest --alluredir report --base-url ${BASE_URL} --username ${USERNAME} --password ${PASSWORD} tests
@@ -56,6 +57,7 @@ pip install -r requirements.txt
 | Параметр | Описание                         | Пример              |
 |----------|----------------------------------|---------------------|
 | BASE_URL | Основной URL адрес               | https://www.lenvendo.ru |
+
 Параметры могут быть заданы как в переменных окружения, так и в строке запуска тестов:
 ```commandline
 python -m pytest --alluredir report --base-url ${BASE_URL} tests

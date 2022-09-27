@@ -1,6 +1,5 @@
 # Тестовое задание - Lenvendo QA
 Детали окружения:
-- OS: Ubuntu 22.04.1 LTS
 - Python 3.10.4
 - Google Chrome Version 105.0.5195.102 (Official Build) (64-bit)
 - allure-cli [2.19.0](https://github.com/allure-framework/allure2/releases/tag/2.19.0)
@@ -16,9 +15,16 @@
 python -m venv venv
 ```
 - Активируйте виртулальное окружение:
+
+linux:
 ```commandline
 source venv/bin/activate
 ```
+windows:
+```commandline
+venv\Scripts\activate
+```
+
 - Установите необходимые библиотеки (файл ```requirements.txt```)
 ```commandline
 pip install -r requirements.txt
@@ -33,7 +39,7 @@ pip install -r requirements.txt
 
 Параметры могут быть заданы как в переменных окружения, так и в строке запуска тестов:
 ```commandline
-python -m pytest --alluredir report --base-url ${BASE_URL} --username ${USERNAME} --password ${PASSWORD} tests
+python -m pytest --alluredir report --base-url <BASE_URL> --username <USERNAME> --password <PASSWORD> tests
 ```
 
 ## API тесты
@@ -45,8 +51,14 @@ python -m pytest --alluredir report --base-url ${BASE_URL} --username ${USERNAME
 python -m venv venv
 ```
 - Активируйте виртулальное окружение:
+
+linux:
 ```commandline
 source venv/bin/activate
+```
+windows:
+```commandline
+venv\Scripts\activate
 ```
 - Установите необходимые библиотеки (файл ```requirements.txt```)
 ```commandline
@@ -60,7 +72,7 @@ pip install -r requirements.txt
 
 Параметры могут быть заданы как в переменных окружения, так и в строке запуска тестов:
 ```commandline
-python -m pytest --alluredir report --base-url ${BASE_URL} tests
+python -m pytest --alluredir report --base-url <BASE_URL> tests
 ```
 ## Отчеты по запускам тестов
 - Отчет по тестированию создается в директории ```report```
